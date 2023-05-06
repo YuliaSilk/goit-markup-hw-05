@@ -15,9 +15,14 @@
 	--color-white: #ffffff;
 	--color-dairy: #fcfcfc;
     --secondary-background: #f4f4fd;
+
+    --header-idx:10;
+    --modal-idx:100;
+
 }
 
 /* main-page */
+
 .body {
 background-color: var(--color-white);
 color:var(--primery-text-color);
@@ -32,8 +37,6 @@ link {
     display: block;
 }
 
-/* header */
-
 .container {
 margin:0 auto;
 max-width:1158px;
@@ -45,6 +48,7 @@ padding:0 15px;
 .header-style {
     position: sticky;
     top: 0;
+    z-index: var(--header-idx);
     background-color:var(--color-white);
     border-bottom: 1px solid  #e7e9fc;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
@@ -107,6 +111,9 @@ gap: 40px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    /* transition: 250ms; */
+    transition-property: color;
 }
 
 .site-nav-link::after {
@@ -140,6 +147,8 @@ gap: 40px;
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
+
+    transition: 250ms;
 }
 
 .address {
@@ -150,7 +159,9 @@ gap: 40px;
     margin-top: 0;
     margin-bottom: 0;
     font-style: normal;
-    gap: 40px
+    gap: 40px;
+
+   
 }
 
 .address .item {
@@ -220,13 +231,17 @@ gap: 40px;
     border-radius: 4px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition: color 250ms, background-color cubic-bezier(0.4, 0, 0.2, 1),
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
 .button:focus {
-    background: #404BBF;
+    background-color: #404BBF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
 }
 
 /* sections */
@@ -556,7 +571,7 @@ margin-left: auto;
 /* MODAL WINDOW */
 
 .backdrop {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 0;
     left: 0;
@@ -564,6 +579,16 @@ margin-left: auto;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     backdrop-filter: blur(2px);
+    z-index: var(--modal-idx);
+
+    transition: opacity var() v ;
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    
+
 }
 
 .modal {
@@ -581,6 +606,8 @@ margin-left: auto;
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
 }
+
+
 
 
 /* position: absolute;
@@ -802,7 +829,6 @@ ul {
  color: #FFFFFF;
 }
 
-background: #4D5AE5;
 
 /* footer */
 .footer-logo {
