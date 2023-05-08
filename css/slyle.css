@@ -214,7 +214,7 @@ gap: 40px;
     letter-spacing: 0.02em;
 }
 
-.button {
+.hero-button {
     display: block;
     flex-direction: row;
     align-items: flex-start;
@@ -622,7 +622,7 @@ margin-left: auto;
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-    transition: opasity 250ms ease-in, transform 250ms ease-in;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibiity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /*    transition: background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
  */
@@ -663,8 +663,7 @@ top: 80px;
  background-color:  var(--color-cornflower);
  border: 1px solid rgba(0, 0, 0, 0.1);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-   250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
  } 
 
@@ -676,16 +675,13 @@ top: 80px;
 .modal-close-btn:hover,
 .modal-close-btn:focus {
     background-color: #404BBF;
-    color: var(--color-white);
+    color: #ffffff;
     border: none;
-    transform: scale(1.5);
-
+    transform: scale(1.5); 
 }
-.modal-close-icon:hover,
-.modal-close-icon:focus {
-fill: #ffffff;
+ .modal-close-icon  {
+ fill: currentColor;
 }
-
 
 
 /* PORFOLIO */
@@ -893,6 +889,7 @@ ul {
 }
 .overlay-text {
     /* position: absolute; */
+    
     top: 0;
     font-size: 16px;
     line-height: 1.5;
@@ -909,7 +906,7 @@ ul {
 
 .card.link:hover .overlay,
 .card.link:focus .overlay {
-    transform: translateY(0);
+    transform: translateY(0%);
 }
 
 /* footer */
