@@ -237,7 +237,7 @@ gap: 40px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-    transition: background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .button:hover,
@@ -407,7 +407,7 @@ gap: 40px;
     background-color: var(--color-iris);
    color:var(--color-cloud) ;
 
-   transition: background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+   transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
   }
 
@@ -467,8 +467,8 @@ fill: currentColor;
    border-radius: 4px;
    color:  var(--color-light-slate);
 
-   transition: background-color, 250ms, cubic-bezier(0.4, 0, 0.2, 1);
-
+   transition:border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+   color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 .customer-icon {
@@ -684,6 +684,7 @@ top: 80px;
 .modal-close-icon:hover,
 .modal-close-icon:focus {
 fill: #ffffff;
+}
 
 
 
@@ -881,9 +882,9 @@ ul {
 
     transform: translateY(100%);
 
-    /* width: 100%;
+    width: 100%;
     height: 100%;
-    padding: 40px 32px; */
+    padding: 40px 32px;
     background: #4D5AE5;
 
     transition: transform var(--anim-first);
@@ -891,25 +892,25 @@ ul {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .overlay-text {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-cloud);
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    padding: 40px 32px;
-    transform: translateY(100%);
+    padding: 40px 32px; */
+    /* transform: translateY(100%); */
 
     transition: transform 250ms cubic-bezier(0.4 0 0.2 1);
 
 }
 
-/* .card.link:hover .overlay,
+.card.link:hover .overlay,
 .card.link:focus .overlay {
     transform: translateY(0);
-} */
+}
 
 /* footer */
 .footer-logo {
